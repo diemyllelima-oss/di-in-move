@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="DI IN MOVE — Fotografia, Storymaker e Social Media. Histórias que merecem ficar.">
+<title>DI IN MOVE | Histórias que merecem ficar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#111;--white:#fff;--gray:#777;--light:#f4f4f1;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--sans);color:var(--black);background:var(--white)}a{color:inherit;text-decoration:none}
+header{height:78px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:10}
+.logo{font-size:21px;font-weight:700;letter-spacing:3px}.logo span{font-weight:400}
+nav{display:flex;gap:28px;align-items:center}nav a{font-size:11px;letter-spacing:1.2px;text-transform:uppercase}nav a:hover{opacity:.55}
+.menu-button{display:none;background:none;border:0;font-size:25px;cursor:pointer}
+.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;background:var(--black);color:white}
+.hero-content{padding:100px 10% 90px 14%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.eyebrow,.section-label{font-size:10px;letter-spacing:2.8px;text-transform:uppercase;color:#999;margin-bottom:25px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(48px,6vw,80px);line-height:1.08;margin-bottom:25px}.hero h1 em{font-weight:500}
+.hero p{max-width:390px;color:#c5c5c5;font-size:14px;line-height:1.9;margin-bottom:35px}
+.button{display:inline-block;padding:15px 25px;border:1px solid currentColor;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;transition:.25s}.button:hover{background:white;color:black}
+.hero-image{min-height:500px;background:#292929;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-image img{width:100%;height:100%;min-height:650px;object-fit:cover}
+.placeholder{color:#aaa;text-align:center;padding:25px;font-size:11px;letter-spacing:1px;line-height:2}
+section{padding:105px 9%}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center}
+.about-image{min-height:470px;background:#e7e7e3;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;color:#777;font-size:11px;letter-spacing:1px;line-height:2}
+.about-image img{width:100%;height:470px;object-fit:cover}
+.section-label{color:#888;margin-bottom:20px}.section-title{font-family:var(--serif);font-size:clamp(36px,5vw,56px);font-weight:500;line-height:1.15}
+.about-text p,.concept p,.service p,.contact p{color:#696969;font-size:13px;line-height:2;margin-top:22px}.signature{font-family:var(--serif);font-style:italic;font-size:24px;margin-top:25px}
+.concept{background:var(--light);text-align:center}.concept .section-title{max-width:800px;margin:auto}.concept p{max-width:650px;margin:25px auto 0}
+.services-heading{margin-bottom:50px}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.service{border-top:1px solid #ccc;padding-top:22px}.service-number{font-family:var(--serif);font-size:18px;color:#999}.service h3{font-family:var(--serif);font-size:27px;font-weight:500;margin:22px 0 12px}.service p{margin-top:0}
+.portfolio{background:var(--black);color:white}.portfolio .section-label{color:#aaa}.portfolio-intro{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:40px}.portfolio-intro p{max-width:300px;color:#aaa;font-size:12px;line-height:1.9}
+.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-auto-rows:250px;gap:12px}.gallery-item{background:#292929;overflow:hidden;display:flex;align-items:center;justify-content:center}.gallery-item:first-child{grid-row:span 2}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery-item:hover img{transform:scale(1.04)}
+.quote{text-align:center;padding-top:120px;padding-bottom:120px}.quote p{max-width:850px;margin:auto;font-family:var(--serif);font-size:clamp(29px,4vw,47px);line-height:1.35}.quote span{display:block;margin-top:25px;color:#777;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.contact{background:var(--light);text-align:center}.contact .section-title{margin-bottom:18px}.contact p{max-width:500px;margin:0 auto 28px}.contact .button{background:#111;color:#fff;border-color:#111}.contact .button:hover{background:#fff;color:#111}.social{margin-top:25px;font-size:12px;letter-spacing:1px}
+footer{background:#111;color:#aaa;padding:32px 7%;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:10px}footer strong{color:#fff;letter-spacing:2px}
+@media(max-width:760px){header{height:68px;padding:0 6%}.menu-button{display:block;color:#111}nav{display:none;position:absolute;top:68px;left:0;width:100%;padding:24px 7%;background:white;flex-direction:column;align-items:flex-start;gap:22px;border-bottom:1px solid #eee}nav.open{display:flex}.hero{grid-template-columns:1fr}.hero-content{padding:78px 8%}.hero-image{min-height:390px}.hero-image img{min-height:390px}section{padding:78px 7%}.about{grid-template-columns:1fr;gap:35px}.about-image,.about-image img{min-height:340px;height:340px}.service-grid{grid-template-columns:1fr;gap:32px}.portfolio-intro{display:block}.portfolio-intro p{margin-top:18px}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.gallery-item:first-child{grid-row:span 1}.gallery-item:last-child{grid-column:span 2}footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#inicio">DI IN MOVE<span>.</span></a>
+<button class="menu-button" aria-label="Abrir menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav><a href="#sobre">Sobre</a><a href="#conceito">Conceito</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></nav>
+</header>
+<main>
+<div class="hero" id="inicio">
+<div class="hero-content">
+<div class="eyebrow">Fotografia · Storymaker · Social Media</div>
+<h1>Histórias que <em>merecem ficar.</em></h1>
+<p>Cada momento tem algo único para contar. Meu trabalho é transformar instantes, ideias e sentimentos em registros que continuam vivos.</p>
+<a class="button" href="#portfolio">Conheça meu trabalho</a>
+</div>
+<div class="hero-image"><div class="placeholder">SUA FOTO PRINCIPAL<br>Adicione aqui uma imagem de destaque</div></div>
+</div>
+<section class="about" id="sobre">
+<div class="about-image">ADICIONE UMA FOTO SUA AQUI</div>
+<div class="about-text"><div class="section-label">Por trás da marca</div><h2 class="section-title">Prazer, sou Diemylle.</h2>
+<p>Sou a pessoa por trás da DI IN MOVE. Trabalho com fotografia, Storymaker e criação de conteúdo, buscando contar histórias de uma forma verdadeira, sensível e criativa.</p>
+<p>Acredito que cada pessoa, marca e ocasião tem uma identidade própria. Por isso, gosto de olhar para cada projeto com atenção, criatividade e cuidado com os detalhes.</p>
+<p>Mais do que produzir imagens, quero criar registros que façam sentido para quem vive e para quem escolhe compartilhar aquela história.</p><div class="signature">Diemylle Lima</div></div>
+</section>
+<section class="concept" id="conceito"><div class="section-label">O que nos move</div><h2 class="section-title">Tudo está em movimento.<br><em>E toda história merece ser contada.</em></h2>
+<p>A DI IN MOVE nasce da ideia de que a vida está sempre acontecendo. São encontros, conquistas, detalhes, ideias e momentos que passam rápido, mas podem permanecer através de um registro.<br><br>Nosso conceito é dar movimento às histórias: transformar o que é vivido em conteúdo, imagem e memória. Com intenção, identidade e autenticidade.</p></section>
+<section id="servicos"><div class="services-heading"><div class="section-label">O que eu faço</div><h2 class="section-title">Serviços</h2></div>
+<div class="service-grid">
+<article class="service"><div class="service-number">01</div><h3>Fotografia</h3><p>Ensaios, eventos, retratos e registros de momentos especiais. Imagens pensadas para guardar histórias e transmitir sentimentos.</p></article>
+<article class="service"><div class="service-number">02</div><h3>Storymaker</h3><p>Cobertura de momentos em tempo real, com vídeos e conteúdos espontâneos que aproximam as pessoas da experiência.</p></article>
+<article class="service"><div class="service-number">03</div><h3>Social Media</h3><p>Criação de conteúdo e comunicação digital para marcas que desejam mostrar sua identidade e se conectar com seu público.</p></article>
+</div></section>
+<section class="portfolio" id="portfolio"><div class="portfolio-intro"><div><div class="section-label">Algumas histórias</div><h2 class="section-title">Meu portfólio</h2></div><p>Um pouco do que já ganhou forma através das lentes, das ideias e do olhar da DI IN MOVE.</p></div>
+<div class="gallery">
+<div class="gallery-item"><div class="placeholder">FOTO 01<br>Adicione seu trabalho</div></div>
+<div class="gallery-item"><div class="placeholder">FOTO 02<br>Adicione seu trabalho</div></div>
+<div class="gallery-item"><div class="placeholder">FOTO 03<br>Adicione seu trabalho</div></div>
+<div class="gallery-item"><div class="placeholder">FOTO 04<br>Adicione seu trabalho</div></div>
+<div class="gallery-item"><div class="placeholder">FOTO 05<br>Adicione seu trabalho</div></div>
+</div></section>
+<section class="quote"><p>“Não é apenas sobre registrar o que aconteceu. É sobre fazer com que a história continue sendo sentida.”</p><span>DI IN MOVE</span></section>
+<section class="contact" id="contato"><div class="section-label">Vamos criar algo juntos?</div><h2 class="section-title">Sua história também merece ficar.</h2><p>Tem um projeto, evento ou ideia em mente? Entre em contato. Vai ser um prazer conhecer sua história.</p>
+<a class="button" href="https://wa.me/5587991978030?text=Ol%C3%A1!%20Conheci%20seu%20trabalho%20pelo%20site%20da%20DI%20IN%20MOVE%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+<div class="social">Instagram: <a href="https://www.instagram.com/di_in.mov/" target="_blank" rel="noopener">@di_in.mov</a></div></section>
+</main>
+<footer><strong>DI IN MOVE.</strong><span>Fotografia · Storymaker · Social Media</span><span>© <span id="year"></span> DI IN MOVE. Todos os direitos reservados.</span></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+</script>
+</body>
+</html>

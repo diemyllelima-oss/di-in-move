@@ -1,0 +1,16 @@
+DI IN MOVE — SITE PORTFÓLIO
+
+Como publicar:
+1. Extraia este ZIP.
+2. Abra https://app.netlify.com/drop
+3. Envie a pasta extraída que contém o arquivo index.html.
+4. Aguarde o Netlify publicar e copie o endereço do site.
+
+Personalização:
+- Abra index.html em um editor de texto.
+- Procure pelos espaços "SUA FOTO PRINCIPAL", "ADICIONE UMA FOTO SUA AQUI" e "FOTO 01" etc.
+- Para colocar suas imagens, crie uma pasta chamada fotos e use, por exemplo:
+  <img src="fotos/minha-foto.jpg" alt="Descrição da foto">
+- O Instagram configurado é @di_in.mov e o WhatsApp é (87) 99197-8030.
+
+O site já está com o nome de marca DI IN MOVE. O identificador do Instagram permanece @di_in.mov.
